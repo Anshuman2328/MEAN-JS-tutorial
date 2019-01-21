@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ash's Ninja Class One </title>
+        <script type="text/javascript">
+
+        function Ninja(name){
+            this.name = name;
+            this.health = 100;
+            this.speed = 3;
+            this.strength = 3;
+        }
+        Ninja.prototype.showStats = function(){
+            console.log("My current stats are  Name: " + this.name + " , Health: " + this.health + " , Speed: " + this.speed + " , Strength: " + this.strength);
+            return this;
+        }
+
+        Ninja.prototype.sayName = function(){
+            console.log("Hey Everyone, my name is  " + this.name + " and I am a Coding Dojo Ninja")
+        }
+        Ninja.prototype.drinkSake = function(){
+            this.health += 10;
+            console.log(" My new health now is : " + this.health)
+            return this;
+        }
+
+            var Ash = new Ninja ("Ash")
+            // Ash.sayName();
+            // Ash.showStats();
+            // Ash.drinkSake();
+            // Ash.drinkSake();
+            // Ash.drinkSake();
+            // Ash.showStats();
+            // Ash.drinkSake();
+            // Ash.showStats();
+
+        Ninja.prototype.punch = function(enemy){
+            if ( enemy instanceof Ninja){
+                enemy.health -= 15;
+                console.log(this.name + " punched " + enemy.name + " and  " + enemy.name + " lost 5 health and the new health is  " + enemy.health + " and all the stats are as follows " );
+                // console.log(enemy.showStats());
+
+            }
+            else 
+            console.log("The ninja that " + this.name + " is trying to punch does not exist.")
+        }
+
+        Ninja.prototype.kick = function(enemy){
+            if ( enemy instanceof Ninja){
+                var damage = this.strength*15
+                enemy.health -= damage;
+                // enemy.health -= 15;
+                console.log(this.name + " kicked " + enemy.name + " and  " + enemy.name + " lost " + damage + " health" + " and current health of the " + enemy.name + " is  " + enemy.health + " and all the stats are as follows " );
+                console.log(enemy.showStats());
+
+            }
+            else 
+            console.log("The ninja that " + this.name + " is trying to punch does not exist.")
+        }
+
+        var x = new Ninja("Ash");
+        var y = new Ninja("Darth Vader");
+        var z;
+        // x.punch(y);
+        // x.kick(y);
+        // y.drinkSake();
+        // x.punch(y);
+        // x.punch(y);
+        // x.punch(y);
+        // x.punch(y);
+        // x.punch(y);
+        // x.punch(y);
+        // x.punch(y);
+        // x.punch(y);
+        // x.punch(y);
+        // y.sayName();
+        // y.drinkSake();
+        // y.drinkSake();
+        // y.drinkSake();
+        // y.drinkSake();
+        // y.drinkSake();
+        // x.punch(y);
+        // x.punch(y);
+        // x.punch(y);
+        // x.punch(y);
+        // x.punch(y);
+        // x.punch(y);
+        // x.punch(y);
+        // x.punch(y);
+        // x.punch(z);
+
+                    // Ninja.prototype.punch = function(){
+                    //             if (ninja instanceof Ninja){
+                    //                 var damage_inflicted = strength * 15;
+                    //                 ninja.health -= damage_inflicted;
+                    //                 console.log(ninja.name + " was kicked by " + this.name + " and lost " + damage_inflicted + " health!")
+                    // }
+
+
+            // function Ninja(name){
+            //     this.name = name;
+            //     this.health = 100;
+            //     var speed = 3;
+            //     var strength = 3;
+            //     this.showStats = function(){
+            //         console.log("Name: " + this.name + ", Health: " + this.health + ", Speed: " + speed + ", Strength: " + strength);
+            //         return this;
+            //     }       
+            // }
+            // Ninja.prototype.drinkSake = function(){
+            //     this.health += 10;
+            //     return this;
+            // }
+            // Ninja.prototype.sayName = function(){
+            //     console.log("Hello my name is " + this.name + ".");
+            //     return this;
+            // }
+            // var ash = new Ninja("ash")
+            // ash.showStats();
+            // ash.drinkSake();
+            // ash.showStats();
+            // ash.sayName();
+        </script>
+    </head>
+    <body>
+        <h1>Ninja Class I</h1>
+        <p><b>Instructions:</b> Create a new class called Ninja with the following attributes:
+            name,
+            health,
+            speed (private),
+            and strength (private).
+            Speed and strength should be 3 by default. Health should be 100 by default.
+
+            The Ninja class should have the following methods:
+
+            1.) sayName() - This should log that Ninja's name to the console.
+            2.) showStats() - This should show the Ninja's Strength and Speed, as well as their health.
+            3.) drinkSake() - This should add +10 Health to the Ninja.</p>
+        <p>Check out the console to have fun.</p>
+    </body>
+</html>
